@@ -1,11 +1,11 @@
-const nftName = "K-Birdz Egg";
-const description = "K-Birdz, Flappy Bird Style P2E game with K-culture made by youtuber JoCoding";
-const hiddenImgUrl = "ipfs://QmbbfqR9EHdEY2Jy2dJYx8jjFftoaMnD6vgKJLMFXemVdL/hidden.mp4";
-const totalNum = 5;
+const nftName = "XPass NFT";
+const description = "뮤지컬 공연 관람을 위한 티켓 : X-PASS and more...";
+const hiddenImgUrl = "https://gametok.co.kr/metadata/images/sample/before-xpass.png";
+const totalNum = 1000;
 
 try {
     for (let i = 1; i <= totalNum; i++) {
-        let json = `{"name":"${nftName} #${i}","description":"${description}","image":"${hiddenImgUrl}","attributes":[{"trait_type": "Unknown","value": "Unknown"}]}`;
+        let json = `{"name":"${nftName} #${i}","description":"${description}","image":"${hiddenImgUrl}","attributes":[{"trait_type": "XPass","value": "발행전"}]}`;
         let fs = require("fs");
         fs.writeFile(`json/${i}.json`, json, "utf8", (e)=>(e));
     }
